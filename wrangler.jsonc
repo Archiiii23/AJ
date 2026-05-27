@@ -1,0 +1,19 @@
+{
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
+  "name": "devcollab-backend",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-04-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+  "vars": {
+    "ALLOWED_ORIGINS": "http://localhost:8080,http://localhost:8081,http://localhost:8082,http://127.0.0.1:8080,http://127.0.0.1:8081,http://127.0.0.1:8082",
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "devcollab-db",
+      "database_id": "devcollab-db",
+      "migrations_dir": "migrations",
+    },
+  ],
+}
